@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DÜX Underground Barbering</title>
+  <meta name="description" content="Bold, artistic cuts in a creative underground studio. Book your chair.">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Cinzel:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Header / Nav ===== -->
+  <header class="header" id="top">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand">
+        <img src="imgs/dux_logo_3.png" alt="DÜX Underground Barbering logo" class="brand__logo" />
+        <span class="brand__text">DÜX <em>Underground</em></span>
+      </a>
+
+      <button class="burger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#barbers">Barbers</a>
+        <a href="#book">Book</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero (textured, neon, chrome) ===== -->
+  <!-- Set --hero-img to your inspiration photo (chair + skull + graffiti) -->
+  <section class="hero hero--studio" aria-label="Hero" style="--hero-img:url('imgs/aux_hero.jpeg')">
+    <div class="hero__overlay"></div>
+    <div class="container hero__inner">
+      <div class="hero__crest">
+        <!-- Bull skull decorative SVG (subtle) -->
+        <svg viewBox="0 0 200 120" aria-hidden="true" class="skull">
+          <path d="M100,10 C130,10 160,20 185,35 170,60 145,70 120,65 120,80 112,105 100,105 88,105 80,80 80,65 55,70 30,60 15,35 40,20 70,10 100,10 Z" fill="url(#chrome)" opacity=".25"/>
+          <defs>
+            <linearGradient id="chrome" x1="0" x2="1">
+              <stop offset="0" stop-color="#b7bcc3"/>
+              <stop offset=".5" stop-color="#f3f4f6"/>
+              <stop offset="1" stop-color="#8b8f94"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <h1 class="hero__headline neon">
+        Art Cuts. Barbershop. <span>Great Vibes.</span>
+      </h1>
+      <p class="hero__sub">
+       Pull up, crack a joke, sip something decent, and walk out looking like you meant to be this handsome — this is the underground where sharp fades meet big ideas.
+      </p>
+      <div class="hero__cta">
+        <a href="#book" class="btn btn--gold">Book Now</a>
+        <a href="#portfolio" class="btn btn--ghost">See the Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="about section texture-concrete">
+    <div class="container grid-2">
+      <div class="about__image reveal" style="position: relative;">
+        <!-- Door shot -->
+        <figure class="door-shot">
+          <img src="imgs/dux_entrance.jpeg" alt="DUX Underground entrance with green door and brick wall" />
+        </figure>
+
+        <!-- Floating vibe polaroid -->
+        <figure class="vibe-card" aria-label="Client vibe">
+          <img src="portfolio/9.jpg" alt="Client smiling after fresh cut" />
+          <figcaption>Vibes</figcaption>
+          <span class="tape tape--tl" aria-hidden="true"></span>
+          <span class="tape tape--br" aria-hidden="true"></span>
+        </figure>
+      </div>
+
+      <div class="about__copy reveal">
+        <h2 class="section__title">
+          Welcome to <span class="ink">The Underground</span>
+        </h2>
+        <p>
+          DÜX isn’t a spa. We’re the steel-toed, brick-walled barber’s den tucked under the street — where the music’s good, the fades are cleaner than your search history, and the jokes have actual flavor.
+        </p>
+        <p>
+          We keep it real, we keep it welcoming, and we keep your lineup razor sharp. No scripts. No upsell speeches. Just barbers who give a damn and hair that behaves even on Monday mornings.
+        </p>
+        <ul class="about__list">
+          <li>Classic cuts, crispy fades, beard wizardry</li>
+          <li>Hot towel shaves & straight razor line work</li>
+          <li>Complimentary chill: water, soda, or “barber’s tea”*</li>
+        </ul>
+        <p class="fineprint">*You bring the bottle. We bring the glasses. Everybody brings the respect.</p>
+        <a href="#book" class="btn btn--green">Book a Chair</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Portfolio ===== -->
+  <section id="portfolio" class="portfolio section">
+    <div class="container">
+      <div class="portfolio__top">
+        <h2 class="section__title reveal">Portfolio</h2>
+
+        <!-- Center CTA text button -->
+        <button class="featured-cta reveal" id="openPoleCta" aria-haspopup="dialog" aria-controls="portfolioModal">
+          <span class="featured-cta__title">Open featured</span>
+          <span class="featured-cta__sub">carousel</span>
+          <span class="badge">Featured</span>
+        </button>
+
+        <!-- Right-side pole button (kept where it is on big screens) -->
+        <div class="portfolio__pole">
+          <button class="pole-btn reveal" id="openPole" aria-haspopup="dialog" aria-controls="portfolioModal">
+            <span class="pole" aria-hidden="true">
+              <span class="cap cap--top"></span>
+              <span class="stripe"></span>
+              <span class="cap cap--bottom"></span>
+            </span>
+            <span class="sr-only">Open featured carousel</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Graffiti wall grid (auto-injected from portfolio.json) -->
+      <div class="graffiti-wall reveal" id="wall" aria-live="polite"></div>
+
+      <!-- Before/After brush slider -->
+      <div class="beforeafter reveal">
+        <h3 class="beforeafter__title">Before / After</h3>
+        <div class="ba-wrap">
+          <img src="portfolio/1.jpg" alt="Before cut" class="ba-img ba-before">
+          <img src="portfolio/2.jpg" alt="After cut" class="ba-img ba-after" style="--clip:50%;">
+          <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Slide to reveal after">
+          <div class="ba-brush"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA / Booking ===== -->
+  <section id="book" class="cta section">
+    <div class="container reveal">
+      <h2 class="section__title">Ready for a <span class="ink">Proper</span> Cut?</h2>
+      <p class="cta__text">
+        Hit the button. Pick your barber. Set a time, and roll in. Walk-ins are always welcomed.
+      </p>
+      <a class="btn btn--gold btn--lg" href="https://your-booking-link.example" target="_blank" rel="noopener">Book Now</a>
+      <p class="cta__note">All vibes welcome. Be cool.</p>
+    </div>
+  </section>
+
+  <!-- ===== Barbers ===== -->
+  <section id="barbers" class="barbers section">
+    <div class="container">
+      <h2 class="section__title reveal">The Crew</h2>
+
+      <div class="barbers__grid">
+        <article class="barber reveal" data-bio="Fade surgeon. Skin fades, razor lineups, and smooth blends.">
+          <div class="barber__img-wrap">
+            <img src="imgs/aux_larry.jpeg" alt="Barber Ace" class="barber__img" />
+          </div>
+          <h3 class="barber__name">ACE</h3>
+          <p class="barber__role">Fade Surgeon</p>
+          <button class="btn btn--ghost barber__bio-btn" aria-haspopup="dialog">Read Bio</button>
+        </article>
+
+        <article class="barber reveal" data-bio="Beard architect with classic scissor work.">
+          <div class="barber__img-wrap">
+            <img src="imgs/1.jpg" alt="Barber Rogue" class="barber__img" />
+          </div>
+          <h3 class="barber__name">ROGUE</h3>
+          <p class="barber__role">Beard Whisperer</p>
+          <button class="btn btn--ghost barber__bio-btn" aria-haspopup="dialog">Read Bio</button>
+        </article>
+
+        <article class="barber reveal" data-bio="Old-school shaves, gentleman cuts, razor poetry.">
+          <div class="barber__img-wrap">
+            <img src="imgs/1.jpg" alt="Barber Duke" class="barber__img" />
+          </div>
+          <h3 class="barber__name">DUKE</h3>
+          <p class="barber__role">Razor Poet</p>
+          <button class="btn btn--ghost barber__bio-btn" aria-haspopup="dialog">Read Bio</button>
+        </article>
+      </div>
+
+      <div class="barbers__cta reveal">
+        <a href="https://your-booking-link.example" target="_blank" rel="noopener" class="btn btn--green">Pick Your Barber</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer / Contact ===== -->
+  <footer id="contact" class="footer">
+    <div class="container footer__grid">
+      <div>
+        <h3 class="footer__title">Find the Door</h3>
+        <p>DÜX Underground Barbering<br/>118 N College Ave, Suite 5 Basement Level<br/>Newton, NC</p>
+        <p><a href="https://maps.example" target="_blank" rel="noopener">Open in Maps</a></p>
+      </div>
+      <div>
+        <h3 class="footer__title">Hours</h3>
+        <p>Tue–Fri: 10am – 7pm<br/>Sat: 9am – 5pm<br/>Sun–Mon: If the light’s on, ask nicely</p>
+      </div>
+      <div>
+        <h3 class="footer__title">Contact</h3>
+        <p><a href="tel:+15555551234">(555) 555-1234</a><br/><a href="mailto:book@duxbarber.com">book@duxbarber.com</a></p>
+        <div class="social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="TikTok">TT</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> DÜX Underground Barbering. Keep it sharp.</p>
+    </div>
+  </footer>
+
+  <!-- ===== Modal: Barber Bio (existing pattern) ===== -->
+  <dialog class="modal" aria-label="Barber bio">
+    <button class="modal__close" aria-label="Close">&times;</button>
+    <div class="modal__content">
+      <img src="assets/barber-1.jpg" alt="" class="modal__img" />
+      <div class="modal__text">
+        <h3 class="modal__name">Barber Name</h3>
+        <p class="modal__bio">Bio goes here.</p>
+        <a class="btn btn--gold" href="https://your-booking-link.example" target="_blank" rel="noopener">Book with <span class="modal__name-inline">Barber</span></a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ===== Modal: Portfolio Carousel ===== -->
+  <dialog class="modal modal--portfolio" id="portfolioModal" aria-label="Featured portfolio">
+    <button class="modal__close" aria-label="Close">&times;</button>
+    <div class="modal__content modal__content--wide">
+      <div class="carousel" id="carousel" aria-live="polite">
+        <button class="car-btn car-btn--prev" aria-label="Previous">‹</button>
+        <div class="car-track" id="carTrack"></div>
+        <button class="car-btn car-btn--next" aria-label="Next">›</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal: Portfolio Item Detail -->
+<dialog class="modal" id="itemModal" aria-label="Portfolio item">
+  <button class="modal__close" aria-label="Close">&times;</button>
+  <div class="modal__content">
+    <img src="" alt="" class="modal__img" id="itemImg" />
+    <div class="modal__text">
+      <h3 class="modal__name" id="itemTitle">Title</h3>
+      <p id="itemSummary" class="fineprint"></p>
+      <p id="itemDetails"></p>
+      <div class="social" id="itemTags"></div>
+    </div>
+  </div>
+</dialog>
+
+
+  <!-- Optional (uncomment if you want GSAP later) -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script> -->
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+[
+  {
+    "src": "portfolio/1.jpg",
+    "title": "Silver Fox Fade",
+    "summary": "Clean beard contour + even salt-and-pepper fade.",
+    "details": "Precision taper and beard work finished in-studio.",
+    "tags": ["fade","beard","studio"]
+  },
+  {
+    "src": "portfolio/2.jpg",
+    "title": "Classic Taper & Beard",
+    "summary": "Low taper with beard blend—chair-side confidence.",
+    "details": "Soft graduation with clipper-over-comb and razor lines.",
+    "tags": ["taper","beard"]
+  },
+  {
+    "src": "portfolio/3.jpg",
+    "title": "Side Design Fade",
+    "summary": "Crisp hair design carved into a mid-fade.",
+    "details": "Symmetric curve motif; finished with detailers.",
+    "tags": ["design","mid-fade"]
+  },
+  {
+    "src": "portfolio/4.jpg",
+    "title": "Mid Skin Fade",
+    "summary": "Smooth transition and tight lineup profile.",
+    "details": "Foil finish; enhanced neckline and temple corners.",
+    "tags": ["skin-fade"]
+  },
+  {
+    "src": "portfolio/5.jpg",
+    "title": "Barber Stripe Vibes",
+    "summary": "Design work during the cut—barber pole cape for flair.",
+    "details": "Freehand linework; kept crown weight for styling.",
+    "tags": ["design","barber-pole"]
+  },
+  {
+    "src": "portfolio/6.jpg",
+    "title": "Pattern Undercut",
+    "summary": "Graphic undercut with flowing linework details.",
+    "details": "Disconnected top; texturized with scissors.",
+    "tags": ["undercut","design"]
+  },
+  {
+    "src": "portfolio/7.jpg",
+    "title": "Gent Cut & Beard",
+    "summary": "Professional finish with full beard shaping.",
+    "details": "Low taper; beard shaded and edged with razor.",
+    "tags": ["taper","beard"]
+  },
+  {
+    "src": "portfolio/8.jpg",
+    "title": "Back Design Detail",
+    "summary": "Back-of-neck hair design with sharp contrast.",
+    "details": "Tight nape; high-contrast linework.",
+    "tags": ["nape","design"]
+  },
+  {
+    "src": "portfolio/9.jpg",
+    "title": "Fresh Outdoor Finish",
+    "summary": "Line-up and fade finished—natural light smile.",
+    "details": "Matte styling product; soft shear texture on top.",
+    "tags": ["fade","lineup"]
+  }
+]
